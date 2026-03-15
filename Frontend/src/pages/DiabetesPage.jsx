@@ -5,7 +5,6 @@ import { FiUpload, FiFileText } from "react-icons/fi";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-import dotenv from "dotenv";
 
 const DiabetesPage = () => {
   const [formData, setFormData] = useState({
