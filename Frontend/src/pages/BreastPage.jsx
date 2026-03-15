@@ -5,7 +5,6 @@ import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import Loader from "react-loader-spinner"; // Import the loader component
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"; // Import the loader styles
 
-import dotenv from "dotenv";
 
 const BreastPage = () => {
   const [formData, setFormData] = useState({

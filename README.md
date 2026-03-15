@@ -58,6 +58,34 @@ PredictiX is a comprehensive multi-disease prediction platform designed to predi
   - Algorithm: InceptionResNet.
   - Input: Lung X-ray or CT scan image.
 
+
+## Local Setup (Updated)
+
+1. Install dependencies for backend and frontend:
+   ```bash
+   cd Backend && npm install
+   cd ../Frontend && npm install
+   ```
+2. Use local MongoDB in `Backend/env` with `MONGODB_URI=mongodb://127.0.0.1:27017/predictix`.
+3. Start both services from backend:
+   ```bash
+   cd Backend
+   npm run dev
+   ```
+4. Open the app at `http://localhost:5173` (frontend) and backend at `http://localhost:8080`.
+
+## Database Notes (Local MongoDB)
+
+- Backend uses `MONGODB_URI` from `Backend/env` and expects a local MongoDB instance.
+- Start MongoDB locally on port `27017` before starting the backend.
+- The code appends the database name (`predictix`) if your URI does not already include it.
+
+## About Section Customization
+
+- The About page content is in `Frontend/src/pages/AboutPage.jsx`.
+- To change your image, replace the imported file (currently `team-04.jpg`) or import a new image from `Frontend/src/assets/AboutImg/` and update `imgUrl`.
+- You can edit your name, profile links, and project description directly in the `teamMembers` object and the `about__description` paragraph.
+
 ## Usage
 
 1. **Sign up** or **Log in** to access the predictors.

@@ -35,10 +35,11 @@ connectDB()
       console.log("ERROR: ", error);
       throw error;
     });
-    app.listen(process.env.PORT || 8000, () => {
-      console.log(`Server is running at port : ${process.env.PORT}`);
+    const port = process.env.PORT || 8000;
+    app.listen(port, () => {
+      console.log(`Server is running at port : ${port}`);
       const ip = getLocalIpAddress();
-      console.log(`Server running at http://${ip}:${process.env.PORT}/`);
+      console.log(`Server running at http://${ip}:${port}/`);
     });
   })
   .catch((err) => {
