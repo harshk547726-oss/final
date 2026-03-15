@@ -1,6 +1,6 @@
 PORT=8080
-MONGODB_URI=mongodb+srv://Priyanshu00:Priyanshu22@cluster0.icewq.mongodb.net/?appName=Cluster0
-CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173,https://predicti-x-v2.vercel.app
+MONGODB_URI=mongodb://127.0.0.1:27017/predictix
+CORS_ORIGIN=http://localhost:5173,http://127.0.0.1:5173
 ACCESS_TOKEN_SECRET=eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcxNDY4MjI4MSwiaWF0IjoxNzE0NjgyMjgxfQ.tjWQTdWC04wnqmjFTkpxIpvSV1s-gawoPVKeVIgHDCg
 ACCESS_TOKEN_EXPIRY=1d
 REFRESH_TOKEN_SECRET=eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcxNDY4MjQxOSwiaWF0IjoxNzE0NjgyNDE5fQ.T6K429qND-frUyJUxJExmn4MrX2OKzoI_YGIJenXC94

@@ -16,22 +16,22 @@ const withDatabaseName = (uri, databaseName) => {
 };
 
 const connectDB = async () => {
-  const atlasUri = withDatabaseName(process.env.MONGODB_URI, DB_NAME);
+  const localMongoUri = withDatabaseName(process.env.MONGODB_URI, DB_NAME);
 
-  if (!atlasUri) {
+  if (!localMongoUri) {
     throw new Error("MONGODB_URI is missing in Backend/env");
   }
 
   try {
-    const connectionInstance = await mongoose.connect(atlasUri, {
+    const connectionInstance = await mongoose.connect(localMongoUri, {
       serverSelectionTimeoutMS: 10000,
     });
 
     console.log(
-      `MongoDB connected (atlas) !! DB HOST: ${connectionInstance.connection.host}`
+      `MongoDB connected (local) !! DB HOST: ${connectionInstance.connection.host}`
     );
   } catch (error) {
-    console.log("MONGODB connection failed (atlas)", error.message);
+    console.log("MONGODB connection failed (local)", error.message);
     throw error;
   }
 };

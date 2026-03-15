@@ -66,7 +66,7 @@ PredictiX is a comprehensive multi-disease prediction platform designed to predi
    cd Backend && npm install
    cd ../Frontend && npm install
    ```
-2. Add your MongoDB Atlas connection string in `Backend/env` (`MONGODB_URI=...`).
+2. Use local MongoDB in `Backend/env` with `MONGODB_URI=mongodb://127.0.0.1:27017/predictix`.
 3. Start both services from backend:
    ```bash
    cd Backend
@@ -74,11 +74,11 @@ PredictiX is a comprehensive multi-disease prediction platform designed to predi
    ```
 4. Open the app at `http://localhost:5173` (frontend) and backend at `http://localhost:8080`.
 
-## Database Notes (Atlas Only)
+## Database Notes (Local MongoDB)
 
-- Backend uses only `MONGODB_URI` from `Backend/env` for database connection.
-- In MongoDB Atlas, add your current IP in **Network Access** and ensure the DB user/password are correct.
-- The code automatically appends the database name (`predictix`) if your URI does not include one.
+- Backend uses `MONGODB_URI` from `Backend/env` and expects a local MongoDB instance.
+- Start MongoDB locally on port `27017` before starting the backend.
+- The code appends the database name (`predictix`) if your URI does not already include it.
 
 ## About Section Customization
 
