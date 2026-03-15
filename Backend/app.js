@@ -1,9 +1,12 @@
+import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/user.routes.js";
 import predRouter from "./routes/prediction.routes.js";
 import pdfRouter from "./routes/pdf.routes.js"; // Import pdfRoutes
+
+dotenv.config({ path: "./env" });
 
 const app = express();
 
